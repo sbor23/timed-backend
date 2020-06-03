@@ -33,7 +33,7 @@ services:
   keycloak:
     image: jboss/keycloak:10.0.1
     volumes:
-      - ./timed-realm.json:/etc/keycloak/keycloak-config.json:ro
+      - ./dev-config/keycloak-config.json:/etc/keycloak/keycloak-config.json:ro
     depends_on:
       - db
     environment:
@@ -56,4 +56,3 @@ services:
 
 volumes:
   dbdata:
-  kcdata:
